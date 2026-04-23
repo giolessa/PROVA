@@ -1,3 +1,4 @@
 id;usuario;email;senha
 1;gio;gio@gmail.com;10022003
 2;deko;deko@email.com;28022007
+3;deko;gioteamo@gmail.com;GIofofa

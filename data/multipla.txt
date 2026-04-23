@@ -1,2 +1,3 @@
 pergunta;resposta;a;b;c;d
 1;Qual a cor do sol?;A;Branco;Amarelo;Vermelho;Laranja
+2;Qual desses é o único animal que não é mamífero?;C;Morcego;Ornintorrinco;Pato;Baleia

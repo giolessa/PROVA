@@ -9,7 +9,7 @@ No link abaixo deixo uma comparação entre as duas versões
 
 [Mudança entre a primeira e ultima versao](https://github.com/giolessa/PROVA/compare/dfc4284...main)
 
-Fiz dois commits, onde no primeiro eu, por acidente, passei parte do código da criação de perguntas Multipla Escolha para criarUsuario.php e mudei todos os arquivos para uma nova estrutura de pastas
+Fiz dois commits, onde no primeiro eu, por acidente, passei parte do código da criação de perguntas Multipla Escolha para criarUsuario.php, alterei o nome de alguns arquivos e mudei todos os arquivos para uma nova estrutura de pastas
 Já no segundo, eu consertei o erro e finalizei a prova.
 
 No diagrama abaixo eu mostro a estrutura de pastas que eu fiz

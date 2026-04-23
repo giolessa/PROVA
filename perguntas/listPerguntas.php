@@ -1,6 +1,6 @@
 <?php
 $perguntas = [];
-$arquivo = "perguntas.txt";
+$arquivo = "../data/perguntas.txt";
 
 if(file_exists($arquivo)) {
     $arq = fopen($arquivo, "r") or die("Erro ao abrir o arquivo");
@@ -21,7 +21,7 @@ if(file_exists($arquivo)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Perguntas Discursivas</title>
-    <link rel="stylesheet" href="style_listas.css">
+    <link rel="stylesheet" href="../css/style_listas.css">
 </head>
 <body>
     <h1>Perguntas Discursivas Cadastradas</h1>
@@ -54,6 +54,6 @@ if(file_exists($arquivo)) {
     </table>
     
     <br>
-    <a href="index.php">Voltar ao Início</a>
+    <a href="../index.php">Voltar ao Início</a>
 </body>
 </html>

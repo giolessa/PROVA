@@ -6,13 +6,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $pergunta = $_POST["pergunta"];
     $resposta = $_POST["resposta"];
 
-    if(!file_exists("perguntas.txt")) {
-        $arq = fopen("perguntas.txt", "w");
+    $caminho_arquivo = "../data/perguntas.txt";
+    
+    if(!file_exists($caminho_arquivo)) {
+        $arq = fopen($caminho_arquivo, "w");
         fwrite($arq, "id;pergunta;resposta\n");
         fclose($arq);
-    }
+    } 
 
-    $arq = fopen("perguntas.txt", "a");
+    $arq = fopen($caminho_arquivo, "a");
     $linha = $id . ";" . $pergunta . ";" . $resposta . "\n";
     fwrite($arq, $linha);
     fclose($arq);
@@ -28,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Pergunta Discursiva</title>
-    <link rel="stylesheet" href="style_perguntas.css">
+    <link rel="stylesheet" href="../css/style_perguntas.css">
 </head>
 <body>
     <div class="card">
@@ -48,6 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php if ($msg): ?>
         <p class="msg sucesso"><?php echo $msg; ?></p>
     <?php endif; ?>
+    <a href="../index.php" class="voltar"><= Voltar ao inicio</a>
     </div>
 </body>
 </html>

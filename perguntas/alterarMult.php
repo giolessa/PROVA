@@ -1,10 +1,10 @@
 <?php
 $msg = "";
-$arquivo_nome = "multipla.txt";
+$arquivo_nome = "../data/multipla.txt";
 $dados_pergunta = ["", "", "", "", "", "", ""];
 
 if (isset($_POST['botaoBuscar'])) {
-    $id_busca = $_POST["id_busca"];
+    $id_busca = $_POST["id_busca"]; 
     
     if (file_exists($arquivo_nome)) {
         $arq = fopen($arquivo_nome, "r");
@@ -63,37 +63,30 @@ if (isset($_POST['botaoAlterar'])) {
 <head>
     <meta charset="UTF-8">
     <title>Alterar Múltipla Escolha</title>
-    <style>
-        body { font-family: sans-serif; max-width: 600px; margin: 20px auto; line-height: 1.6; }
-        .card { border: 1px solid #ccc; padding: 20px; border-radius: 8px; background: #f9f9f9; margin-bottom: 20px; }
-        .sucesso { color: #2e7d32; font-weight: bold; }
-        .erro { color: #d32f2f; font-weight: bold; }
-        input[type="text"] { width: 100%; padding: 8px; margin: 5px 0 15px 0; box-sizing: border-box; }
-        input[type="submit"] { padding: 10px 20px; cursor: pointer; }
-        .btn-alterar { background-color: #4CAF50; color: white; border: none; }
-        .btn-alterar:disabled { background-color: #ccc; cursor: not-allowed; }
-    </style>
+    <link rel="stylesheet" href="../css/style_alterar.css">
 </head>
 <body>
 
-    <h1>Gerenciar Múltipla Escolha</h1>
+    <div class="container-alterar">
+        <h1>Gerenciar Múltipla Escolha</h1>
 
-    <div class="card">
-        <form method="POST">
+        <form method="POST" action="">
             <label>Digite o ID para editar:</label>
-            <input type="text" name="id_busca" required>
-            <input type="submit" name="botaoBuscar" value="Buscar Pergunta">
+            <div class="busca-id">
+                <input type="text" name="id_busca" required>
+                <input type="submit" name="botaoBuscar" value="Buscar">
+            </div>
         </form>
-    </div>
 
-    <div class="card">
-        <form method="POST">
+        <hr>
+
+        <form method="POST" action="">
             <input type="hidden" name="id" value="<?php echo $dados_pergunta[0]; ?>">
 
             <label>Pergunta:</label>
             <input type="text" name="pergunta" value="<?php echo $dados_pergunta[1]; ?>" required>
 
-            <label>Alternativa Correta (Letra):</label>
+            <label>Resposta Correta (Letra):</label>
             <input type="text" name="resposta" value="<?php echo $dados_pergunta[2]; ?>" maxlength="1" required>
 
             <label>Opção A:</label>
@@ -109,13 +102,15 @@ if (isset($_POST['botaoAlterar'])) {
             <input type="text" name="d" value="<?php echo $dados_pergunta[6]; ?>" required>
 
             <input type="submit" name="botaoAlterar" value="Confirmar Alteração" 
-                   class="btn-alterar" <?php if(empty($dados_pergunta[0])) echo "disabled"; ?>>
+                   class="btn-confirmar" <?php if(empty($dados_pergunta[0])) echo "disabled"; ?>>
         </form>
-    </div>
 
-    <p class="<?php echo (strpos($msg, 'sucesso') !== false || strpos($msg, 'encontrada') !== false) ? 'sucesso' : 'erro'; ?>">
-        <?php echo $msg; ?>
-    </p>
+        <p class="msg-status <?php echo (strpos($msg, 'sucesso') !== false || strpos($msg, 'encontrada') !== false) ? 'sucesso' : 'erro'; ?>">
+            <?php echo $msg; ?>
+        </p>
+
+        <a href="../index.php" class="link-voltar"><= Voltar ao Início</a>
+    </div>
 
 </body>
 </html>

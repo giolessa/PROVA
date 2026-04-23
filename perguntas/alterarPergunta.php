@@ -10,21 +10,20 @@
 
     <div class="container-escolha">
         <header>
-            <h1>O que vamos criar hoje?</h1>
-            <p>Selecione o formato da nova pergunta</p>
+            <h1>Qual tipo de pergunta deseja alterar?</h1>
         </header>
 
         <div class="opcoes-flex">
-            <a href="criarPerguntas.php" class="card-opcao">
+            <a href="alterarPerguntas.php" class="card-opcao">
                 <h2>Discursiva</h2>
                 <p>Perguntas em texto</p>
-                <span class="btn-ir">Criar -></span>
+                <span class="btn-ir">Alterar -></span>
             </a>
 
-            <a href="criarPerguntasMult.php" class="card-opcao">
+            <a href="alterarMult.php" class="card-opcao">
                 <h2>Múltipla Escolha</h2>
                 <p>Perguntas com alternativas com alternativas de A até D</p>
-                <span class="btn-ir">Criar -></span>
+                <span class="btn-ir">Alterar -></span>
             </a>
         </div>
 

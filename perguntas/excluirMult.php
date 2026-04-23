@@ -1,7 +1,7 @@
 <?php
 $msg = "";
 $pergunta = ["", "", "", "", "", "", ""];
-$arquivo_nome = "multipla.txt";
+$arquivo_nome = "../data/multipla.txt";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["buscar"])) {
     $id = $_POST["id"];
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["excluir"])) {
 <head>
     <meta charset="UTF-8">
     <title>Excluir Múltipla Escolha</title>
-    <link rel="stylesheet" href="style_excluir.css">
+    <link rel="stylesheet" href="../css/style_excluir.css">
 </head>
 <body>
     <div class="container">
@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["excluir"])) {
             <button type="submit" name="excluir" class="btn-del" <?= $pergunta[0] == "" ? "disabled" : "" ?>>Confirmar Exclusão</button>
         </form>
         <p><?= $msg ?></p>
-        <a href="lista_multiplas.php">Voltar</a>
+        <a href="../index.php">Voltar</a>
     </div>
 </body>
 </html>

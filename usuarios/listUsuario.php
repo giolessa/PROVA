@@ -1,8 +1,9 @@
 <?php
 $usuarios = [];
+$caminho_arquivo = "../data/usuarios.txt";
 
-if(file_exists("usuarios.txt")) {
-    $arq = fopen("usuarios.txt", "r") or die("Erro ao abrir o arquivo");
+if(file_exists($caminho_arquivo)) {
+    $arq = fopen($caminho_arquivo, "r") or die("Erro ao abrir o arquivo");
     $primeiraLinha = true;
     while(!feof($arq)) {
         $linha = fgets($arq);
@@ -20,11 +21,11 @@ if(file_exists("usuarios.txt")) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Usuários</title>
-    <link rel="stylesheet" href="style_listaUsuarios.css">
+    <link rel="stylesheet" href="../css/style_listaUsuarios.css">
 </head>
 <body>
     <h1>Usuários Cadastrados</h1>
-    <a href="criarUsuario.php"><button>+ Adicionar Usuário</button></a>
+    <a href="criarUsuario.php"><button>Adicionar Usuário</button></a>
     <br><br>
 
     <table>
@@ -43,13 +44,16 @@ if(file_exists("usuarios.txt")) {
                     <td><?php echo htmlspecialchars($u[1]); ?></td>
                     <td><?php echo htmlspecialchars($u[2]); ?></td>
                     <td>
-                        <a href="alterarUsuario.php?linha=<?php echo $i ?>">Editar</a>
-                        <a href="excluirUsuario.php?linha=<?php echo $i ?>"
+                        <a href="alterarUsuario.php?id=<?php echo $u[0] ?>">Editar</a>
+                        <a href="excluirUsuario.php?id=<?php echo $u[0] ?>"
                            onclick="return confirm('Tem certeza que deseja apagar esse usuário?')">Apagar</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
+
+    <br>
+    <a href="../index.php" style="text-decoration: none; color: #888;">Voltar ao Início</a>
 </body>
 </html>

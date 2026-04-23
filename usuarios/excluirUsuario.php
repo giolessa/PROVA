@@ -1,7 +1,7 @@
 <?php
 $msg = "";
 $usuario = ["", "", "", ""];
-$arquivo_nome = "usuarios.txt";
+$arquivo_nome = "../data/usuarios.txt";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["buscar"])) {
     $id = $_POST["id"];
@@ -22,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["buscar"])) {
         $msg = "Usuário não encontrado!";
     }
 }
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["excluir"])) {
     $id = $_POST["id"];
     $temp = [];
@@ -45,6 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["excluir"])) {
             }
             fclose($arquivo);
             $msg = "Usuário excluído com sucesso!";
+            $usuario = ["", "", "", ""];
         } else {
             $msg = "ID não encontrado para exclusão.";
         }
@@ -56,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["excluir"])) {
 <head>
     <meta charset="UTF-8">
     <title>Excluir Usuário</title>
-    <link rel="stylesheet" href="style_excluirUsu.css">
+    <link rel="stylesheet" href="../css/style_excluirUsu.css">
 </head>
 <body>
     <div class="container">
@@ -84,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["excluir"])) {
         <p class="msg-status"><?= $msg ?></p>
         
         <br>
-        <a href="index.php" class="link-voltar">Voltar ao Início</a>
+        <a href="../index.php" class="link-voltar">Voltar ao Início</a>
     </div>
 </body>
 </html>

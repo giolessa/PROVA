@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Lora:italic,wght@0,700&display=swap');
+
+body {
+    background-color: #fdfaf9;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.card-user {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    border-left: 10px solid #e2b4bd;
+    box-shadow: 0 10px 40px rgba(226, 180, 189, 0.15);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    font-family: 'Lora', serif;
+    color: #e2b4bd;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #888;
+    font-size: 14px;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: 2px solid #f9f9f9;
+    background: #fafafa;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #e2b4bd;
+    outline: none;
+    background: white;
+}
+
+input[type="submit"] {
+    background: #e2b4bd;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    width: 100%;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background: #d4a3ad;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 163, 173, 0.4);
+}
+
+.msg {
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.sucesso { background: #f1f8e9; color: #689f38; }
+.erro { background: #ffebee; color: #d32f2f; }

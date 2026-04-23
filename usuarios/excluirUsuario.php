@@ -56,24 +56,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["excluir"])) {
 <head>
     <meta charset="UTF-8">
     <title>Excluir Usuário</title>
+    <link rel="stylesheet" href="style_excluirUsu.css">
 </head>
 <body>
-    <h2>Excluir Usuário</h2>
+    <div class="container">
+        <h2>Excluir Usuário</h2>
 
-    <form action="excluirUsuario.php" method="POST">
-        <label>ID:</label>
-        <input type="text" name="id" value="<?= $usuario[0] ?>" required>
-        <button type="submit" name="buscar">Buscar</button>
-        <hr>
-        <p>Nome: <b><?= $usuario[1] ?></b></p>
-        <p>E-mail: <b><?= $usuario[2] ?></b></p>
+        <form action="excluirUsuario.php" method="POST">
+            <label>ID:</label>
+            <div class="busca-row">
+                <input type="text" name="id" value="<?= $usuario[0] ?>" required>
+                <button type="submit" name="buscar">Buscar</button>
+            </div>
+            
+            <hr>
+            
+            <div class="info-box">
+                <p>Nome: <b><?= $usuario[1] ?></b></p>
+                <p>E-mail: <b><?= $usuario[2] ?></b></p>
+            </div>
 
-        <button type="submit" name="excluir" <?= $usuario[0] == "" ? "disabled" : "" ?>>Confirmar Exclusão</button>
-    </form>
+            <button type="submit" name="excluir" class="btn-confirmar" <?= $usuario[0] == "" ? "disabled" : "" ?>>
+                Confirmar Exclusão
+            </button>
+        </form>
 
-    <p><?= $msg ?></p>
-    
-    <br>
-    <a href="criarUsuario.php">Voltar ao Cadastro</a>
+        <p class="msg-status"><?= $msg ?></p>
+        
+        <br>
+        <a href="index.php" class="link-voltar">Voltar ao Início</a>
+    </div>
 </body>
 </html>

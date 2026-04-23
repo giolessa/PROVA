@@ -44,28 +44,46 @@ if(isset($_POST['botaoAlterar'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alterar Usuário</title>
+    <link rel="stylesheet" href="style_alterarUsu.css">
 </head>
 <body>
-    <h1>Alterar Usuário</h1>
-    <form method="POST">
-        id: <input type="text" name="id" value="<?php echo $usuario[0]; ?>">
-        <input type="submit" name="botaoBuscar" value="Buscar">
-    </form>
-    <hr>
-    <form method="POST">
-        <input type="hidden" name="id" value="<?php echo $usuario[0]; ?>">
-        Usuário: <input type="text" name="usuario" value="<?php echo $usuario[1]; ?>">
-        Nome: <input type="text" name="nome" value="<?php echo $usuario[2]; ?>"><br><br>
-        E-mail: <input type="text" name="email" value="<?php echo $usuario[3]; ?>"><br><br>
-        <input type="submit" name="botaoAlterar" value="Confirmar Alteração" <?php if($usuario[0]=="") echo "disabled"; ?>>
-    </form>
-    <p><strong><?php echo $msg; ?></strong></p>
+    <div class="container-alterar">
+        <h1>Alterar Usuário</h1>
+        
+        <form method="POST">
+            <label>ID do Usuário:</label>
+            <div class="busca-id">
+                <input type="text" name="id" value="<?php echo $usuario[0]; ?>" required>
+                <input type="submit" name="botaoBuscar" value="Buscar">
+            </div>
+        </form>
 
-    <?php echo $msg; ?>
+        <hr>
+
+        <form method="POST">
+            <input type="hidden" name="id" value="<?php echo $usuario[0]; ?>">
+            
+            <label>Nome:</label>
+            <input type="text" name="nome" value="<?php echo $usuario[1]; ?>">
+
+            <label>E-mail:</label>
+            <input type="email" name="email" value="<?php echo $usuario[2]; ?>">
+
+            <label>Senha:</label>
+            <input type="text" name="senha" value="<?php echo $usuario[3]; ?>">
+
+            <br><br>
+            <input type="submit" name="botaoAlterar" value="Confirmar Alteração" 
+                   style="width: 100%;" <?php if($usuario[0]=="") echo "disabled"; ?>>
+        </form>
+
+        <p class="msg-status"><?php echo $msg; ?></p>
+        <a href="index.php" class="link-voltar"><= Voltar</a>
+    </div>
 </body>
 </html>

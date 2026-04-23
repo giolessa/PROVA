@@ -1,0 +1,2 @@
+id;pergunta;resposta
+1;Qual o décimo algarismo existente?;9

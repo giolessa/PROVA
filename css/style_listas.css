@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+body {
+    background-color: #fdfaf9;
+    font-family: 'Quicksand', sans-serif;
+    color: #4a4a4a;
+    padding: 40px;
+    margin: 0;
+}
+
+h1 {
+    color: #a8b5a2;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+
+button {
+    background-color: #a8b5a2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(168, 181, 162, 0.2);
+}
+
+button:hover {
+    background-color: #8e9c88;
+    transform: translateY(-2px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+    margin-top: 10px;
+}
+
+thead {
+    background-color: #f4f7f2;
+}
+
+th {
+    text-align: left;
+    padding: 15px;
+    color: #8e9c88;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 15px;
+    color: #666;
+}
+
+td:first-child {
+    font-weight: 600;
+    color: #a8b5a2;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+
+a[href*="atualizar"] {
+    color: #a8b5a2;
+    margin-right: 10px;
+}
+
+a[href*="atualizar"]:hover {
+    color: #8e9c88;
+    text-decoration: underline;
+}
+
+
+a[href*="excluir"] {
+    color: #e2b4bd; 
+}
+
+a[href*="excluir"]:hover {
+    color: #d4a3ad;
+    text-decoration: underline;
+}
+
+a[href="index.php"] {
+    display: inline-block;
+    margin-top: 20px;
+    color: #aaa;
+}
+
+a[href="index.php"]:hover {
+    color: #a8b5a2;
+}
+
+
+tr:hover {
+    background-color: #fafdfa;
+}

@@ -20,6 +20,7 @@ if(file_exists("usuarios.txt")) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Usuários</title>
+    <link rel="stylesheet" href="style_listaUsuarios.css">
 </head>
 <body>
     <h1>Usuários Cadastrados</h1>
@@ -42,7 +43,7 @@ if(file_exists("usuarios.txt")) {
                     <td><?php echo htmlspecialchars($u[1]); ?></td>
                     <td><?php echo htmlspecialchars($u[2]); ?></td>
                     <td>
-                        <a href="atualizarUsuario.php?linha=<?php echo $i ?>">Editar</a>
+                        <a href="alterarUsuario.php?linha=<?php echo $i ?>">Editar</a>
                         <a href="excluirUsuario.php?linha=<?php echo $i ?>"
                            onclick="return confirm('Tem certeza que deseja apagar esse usuário?')">Apagar</a>
                     </td>

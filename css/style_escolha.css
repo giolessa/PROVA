@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Lora:italic,wght@0,700&display=swap');
+
+body {
+    background-color: #fdfaf9;
+    font-family: 'Quicksand', sans-serif;
+    color: #4a4a4a;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container-escolha {
+    text-align: center;
+    max-width: 700px;
+    width: 90%;
+}
+
+h1 {
+    font-family: 'Lora', serif;
+    color: #a8b5a2;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #888;
+    margin-bottom: 40px;
+}
+
+.opcoes-flex {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-opcao {
+    background: white;
+    text-decoration: none;
+    color: inherit;
+    padding: 40px 30px;
+    border-radius: 25px;
+    width: 250px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.card-opcao:hover {
+    transform: translateY(-10px);
+    border-color: #e2b4bd; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.card-opcao h2 {
+    color: #a8b5a2;
+    margin: 0 0 10px 0;
+}
+
+.card-opcao p {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 25px;
+    min-height: 40px;
+}
+
+.btn-ir {
+    display: inline-block;
+    background: #a8b5a2;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.voltar {
+    display: inline-block;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #aaa;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.voltar:hover {
+    color: #a8b5a2;
+}

@@ -1,2 +1,0 @@
-pergunta;resposta;a;b;c;d
-Qual a cor do sol?;Branco;Branco;Verde;Amarelo;Laranja

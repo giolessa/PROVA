@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Lora:italic,wght@0,700&display=swap');
+
+:root {
+    --matcha: #a8b5a2;
+    --matcha-dark: #8e9c88;
+    --rose: #e2b4bd;
+    --rose-dark: #d4a3ad;
+    --bg: #fdfaf9;
+    --text: #4a4a4a;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: 'Quicksand', sans-serif;
+    color: var(--text);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.dashboard-container {
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    padding: 40px 0;
+}
+
+header h1 {
+    font-family: 'Lora', serif;
+    font-size: 32px;
+    color: var(--matcha-dark);
+    margin: 0;
+}
+
+header p {
+    color: #888;
+    margin: 10px 0 40px 0;
+}
+
+.grid-opcoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-menu {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.3s ease;
+    height: auto;
+}
+
+.card-menu:hover {
+    transform: translateY(-5px);
+}
+
+.card-menu h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #666;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+}
+
+.btn {
+    text-decoration: none;
+    color: var(--text);
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: #fafafa;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #f0f0f0;
+    border-color: #ddd;
+}
+
+.btn-destaque {
+    background-color: var(--matcha);
+    color: white;
+    border: none;
+}
+
+.btn-destaque:hover {
+    background-color: var(--matcha-dark);
+    box-shadow: 0 4px 12px rgba(168, 181, 162, 0.4);
+}
+
+.btn-destaque-rosa {
+    background-color: var(--rose);
+    color: white;
+    border: none;
+}
+
+.btn-destaque-rosa:hover {
+    background-color: var(--rose-dark);
+    box-shadow: 0 4px 12px rgba(226, 180, 189, 0.4);
+}
+
+.divisor {
+    height: 1px;
+    background-color: #eee;
+    margin: 10px 0;
+}
+
+.btn-perigo {
+    text-decoration: none;
+    color: #d9534f; 
+    padding: 10px;
+    border: 1px solid #f2dede;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    background-color: #fffafa;
+    text-align: center;
+}
+
+.btn-perigo:hover {
+    background-color: #d9534f;
+    color: white;
+    border-color: #d9534f;
+}

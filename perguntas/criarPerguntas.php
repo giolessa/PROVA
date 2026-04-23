@@ -27,20 +27,27 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar Pergunta</title>
+    <title>Adicionar Pergunta Discursiva</title>
+    <link rel="stylesheet" href="style_perguntas.css">
 </head>
 <body>
+    <div class="card">
     <h1>Adicione sua pergunta!</h1>
-    <form action="perguntas.php" method="POST">
-        Insira o ID da pergunta: <input type="text" name="id" required>
-        <br><br>
-        Insira a pergunta: <input type="text" name="pergunta" required>
-        <br><br>
-        Insira a resposta modelo: <input type="text" name="resposta" required>
-        <br><br>    
+    <form action="criarPerguntas.php" method="POST">
+        <label>Insira o ID da pergunta:</label>
+        <input type="text" name="id" required>
+        
+        <label>Insira a pergunta:</label>
+        <input type="text" name="pergunta" required>
+        
+        <label>Resposta Modelo:</label>
+        <input type="text" name="resposta" required>
+
         <input type="submit" value="Adicionar Pergunta">
     </form>
-
-    <p><?php echo $msg; ?></p>
+    <?php if ($msg): ?>
+        <p class="msg sucesso"><?php echo $msg; ?></p>
+    <?php endif; ?>
+    </div>
 </body>
 </html>

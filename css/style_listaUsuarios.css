@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+body {
+    background-color: #fdfaf9;
+    font-family: 'Quicksand', sans-serif;
+    color: #4a4a4a;
+    margin: 0;
+    padding: 40px;
+}
+
+h1 {
+    color: #a8b5a2; 
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #a8b5a2;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(168, 181, 162, 0.2);
+}
+
+button:hover {
+    background-color: #8e9c88;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(168, 181, 162, 0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    margin-top: 10px;
+}
+
+thead {
+    background-color: #f4f7f2;
+}
+
+th {
+    text-align: left;
+    padding: 20px;
+    color: #8e9c88;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #f9f9f9;
+    font-size: 15px;
+}
+
+
+tr:hover {
+    background-color: #fafdfa;
+}
+
+td a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+td a[href*="atualizar"] {
+    color: #a8b5a2;
+}
+
+td a[href*="atualizar"]:hover {
+    color: #8e9c88;
+    text-decoration: underline;
+}
+
+td a[href*="excluir"] {
+    color: #e2b4bd;
+    margin-left: 10px;
+}
+
+td a[href*="excluir"]:hover {
+    color: #d4a3ad;
+    text-decoration: underline;
+}
+
+td:first-child {
+    font-weight: 600;
+    color: #a8b5a2;
+}

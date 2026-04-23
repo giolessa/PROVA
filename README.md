@@ -2,7 +2,7 @@
 
 Esse projeto foi desenvolvido como parte da avaliação da disciplina DAW.
 
-Aqui no README vou explicar sobre as mudanças feitas no arquivo original.
+Aqui no README falar sobre as principais mudanças feitas no arquivo original.
 Para ver o arquivo original, por ter feito por upload de arquivos direto no github, é só entrar no histórico de commits do repositório que todos os códigos estarão juntos
 
 No link abaixo deixo uma comparação entre as duas versões

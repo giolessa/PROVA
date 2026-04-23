@@ -1,10 +1,11 @@
 <?php
 $msg = "";
 $usuario = ["", "", "", ""];
+$caminho_arquivo = "../data/usuarios.txt";
 
 if(isset($_POST['botaoBuscar'])) {
     $id = $_POST["id"];
-    $arq = fopen("usuarios.txt", "r") or die("erro ao abrir");
+    $arq = fopen($caminho_arquivo, "r") or die("erro ao abrir");
     while (($dados = fgetcsv($arq, 0, ";")) !== FALSE) {
         if ($dados[0] == $id) {
             $usuario = $dados;
@@ -23,7 +24,7 @@ if(isset($_POST['botaoAlterar'])) {
     $senha = $_POST["senha"];
     $temp = [];
     
-    $arq = fopen("usuarios.txt", "r") or die("erro na leitura");
+    $arq = fopen($caminho_arquivo, "r") or die("erro na leitura");
     while (($dados = fgetcsv($arq, 0, ";")) !== FALSE) {
         if ($dados[0] == $id) {
             $temp[] = $id . ";" . $nome . ";" . $email . ";" . $senha . "\n";
@@ -33,14 +34,13 @@ if(isset($_POST['botaoAlterar'])) {
     }
     fclose($arq);
 
-    $arq = fopen("usuarios.txt", "w") or die("erro na escrita");
+    $arq = fopen($caminho_arquivo, "w") or die("erro na escrita");
     foreach ($temp as $linha) {
         fwrite($arq, $linha);
     }
     fclose($arq);
     $msg = "Alterado com sucesso!";
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +49,7 @@ if(isset($_POST['botaoAlterar'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alterar Usuário</title>
-    <link rel="stylesheet" href="style_alterarUsu.css">
+    <link rel="stylesheet" href="../css/style_alterarUsu.css">
 </head>
 <body>
     <div class="container-alterar">
@@ -83,7 +83,7 @@ if(isset($_POST['botaoAlterar'])) {
         </form>
 
         <p class="msg-status"><?php echo $msg; ?></p>
-        <a href="index.php" class="link-voltar"><= Voltar</a>
+        <a href="../index.php" class="link-voltar"><= Voltar</a>
     </div>
 </body>
 </html>

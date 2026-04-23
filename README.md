@@ -12,6 +12,8 @@ No link abaixo deixo uma comparação entre as duas versões
 Fiz dois commits, onde no primeiro eu, por acidente, passei parte do código da criação de perguntas Multipla Escolha para criarUsuario.php e mudei todos os arquivos para uma nova estrutura de pastas
 Já no segundo, eu consertei o erro e finalizei a prova.
 
+No diagrama abaixo eu mostro a estrutura de pastas que eu fiz
+
 ```text
   PROVA/
   ├── index.php                 # pagina principal

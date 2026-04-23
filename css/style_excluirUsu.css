@@ -10,14 +10,7 @@ body {
     margin: 0;
 }
 
-body > h2, body > form, body > p, body > a {
-    position: relative;
-    z-index: 2;
-}
-
-body::before {
-    content: "";
-    position: absolute;
+.container {
     background: white;
     width: 400px;
     padding: 30px;
@@ -25,6 +18,7 @@ body::before {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     border-top: 6px solid #e2b4bd;
     min-height: 400px;
+    position: relative;
 }
 
 h2 {
@@ -36,7 +30,7 @@ h2 {
 }
 
 form {
-    width: 350px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -48,8 +42,14 @@ label {
     margin-bottom: 5px;
 }
 
+.busca-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
 input[type="text"] {
-    width: 65%;
+    flex: 1;
     padding: 12px;
     border-radius: 12px;
     border: 2px solid #f0f0f0;
@@ -75,6 +75,13 @@ hr {
     margin: 20px 0;
 }
 
+.info-box {
+    background-color: #fff9fa;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
 p {
     font-size: 15px;
     color: #666;
@@ -85,7 +92,7 @@ b {
     color: #333;
 }
 
-button[name="excluir"] {
+.btn-confirmar {
     width: 100%;
     background-color: #f28d8d;
     color: white;
@@ -97,13 +104,19 @@ button[name="excluir"] {
     margin-top: 20px;
 }
 
-button[name="excluir"]:disabled {
+.btn-confirmar:disabled {
     background-color: #eee;
     color: #ccc;
     cursor: not-allowed;
 }
 
-a {
+.msg-status {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.link-voltar {
     display: block;
     text-align: center;
     margin-top: 20px;

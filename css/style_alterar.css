@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+body {
+    background-color: #fdfaf9;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container-alterar {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 450px;
+    border-top: 6px solid #7a8a99;
+}
+h1 {
+    color: #5a6a7a;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.busca-id {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 12px;
+    border: 2px solid #f0f0f0;
+    background: #fafafa;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+input[type="submit"] {
+    background-color: #7a8a99;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover:not(:disabled) {
+    background-color: #5a6a7a;
+}
+
+input[type="submit"]:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+label {
+    font-size: 14px;
+    color: #888;
+    font-weight: 600;
+}
+
+.msg-status {
+    text-align: center;
+    margin-top: 15px;
+    color: #a8b5a2;
+}
+
+.link-voltar {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #bbb;
+    font-size: 13px;
+}

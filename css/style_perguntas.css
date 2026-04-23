@@ -71,5 +71,14 @@ input[type="submit"]:hover {
     font-weight: 600;
 }
 
+.voltar {
+    display: inline-block;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #aaa;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
 .sucesso { color: #689f38; }
 .erro { color: #d32f2f; }
